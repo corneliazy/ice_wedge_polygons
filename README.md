@@ -1,1 +1,1 @@
-# ice_wedge_polygons
+# Detection of ice wedge polygons
