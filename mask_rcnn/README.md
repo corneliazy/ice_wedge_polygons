@@ -31,18 +31,29 @@ dataset<br />
   ----via_project.json<br />
 
 
-## Processing
+## Training
 
-Processing is done in Google Colab.
+Processing is done in Google Colab. The dataset for training has to be uploaded in a connected Google drive folder.
 
 The following steps are performed:
 1. Importing and cloning repositories
 2. Installing the correct versions of libraries (oler versions of keras and tensorflow required)
-3. Configurations of training and model
-4. Creating Dataset class
-5. Loading training and validation datasetes
+3. Configuration of training
+4. Creating dataset class
+5. Loading training and validation datasets
 6. Training
 
-## Results
+The trained model has to be saved to serve as input for prediction.
+
+
+## Predicting
+
+The following steps are performed:
+1. Configuration for predicting
+2. Loading the model and weights
+3. Load image
+4. Predict bounding box and mask
+5. Display of results
+
 
 ![name-of-you-image](https://your-copied-image-address)
