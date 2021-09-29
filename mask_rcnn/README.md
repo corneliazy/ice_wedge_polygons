@@ -13,17 +13,17 @@ Training and validation image tiles are created based on thes script provided in
 
 The required structure of the training/validation dataset has to look as follows:
 
-dataset
- --train
-  ----first_image.jpg
-  ----second_image.jpg
-  ----...
-  ----via_project.json
- --val
-  ----third_image.jpg
-  ----fourth_image.jpg
-  ----...
-  ----via_project.json
+dataset<br />
+ --train<br />
+  ----first_image.jpg<br />
+  ----second_image.jpg<br />
+  ----...<br />
+  ----via_project.json<br />
+ --val<br />
+  ----third_image.jpg<br />
+  ----fourth_image.jpg<br />
+  ----...<br />
+  ----via_project.json<br />
 
 
 ## Processing
