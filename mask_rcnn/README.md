@@ -37,7 +37,7 @@ Processing is done in Google Colab. The dataset for training has to be uploaded 
 
 The following steps are performed:
 1. Importing and cloning repositories
-2. Installing the correct versions of libraries (oler versions of keras and tensorflow required)
+2. Installing the correct versions of libraries (older versions of keras and tensorflow required)
 3. Configuration of training
 4. Creating dataset class
 5. Loading training and validation datasets
@@ -45,8 +45,10 @@ The following steps are performed:
 
 The trained model has to be saved to serve as input for prediction.
 
+A trained model is accessible here: https://wolke.upgradetofreedom.de/s/Z5wtnjgWbXDT7F2
 
-## Predicting
+
+## Prediction
 
 The following steps are performed:
 1. Configuration for predicting
@@ -56,4 +58,8 @@ The following steps are performed:
 5. Display of results
 
 
-![name-of-you-image](https://your-copied-image-address)
+### Results
+
+Example of prediction for one tile
+
+![result_example](https://github.com/Wagner-L/ice_wedge_polygons/blob/main/images/result_example.png)
