@@ -35,6 +35,14 @@ dataset<br />
 
 Processing is done in Google Colab.
 
+The following steps are performed:
+1. Importing and cloning repositories
+2. Installing the correct versions of libraries (oler versions of keras and tensorflow required)
+3. Configurations of training and model
+4. Creating Dataset class
+5. Loading training and validation datasetes
+6. Training
+
 ## Results
 
 ![name-of-you-image](https://your-copied-image-address)
