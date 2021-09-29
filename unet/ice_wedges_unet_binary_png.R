@@ -23,6 +23,7 @@ setwd("C:/Users/Cornelia/Documents/Studium/EAGLE/2Semester")
 ## DATA PREPROCESSING
 # index data
 
+#### ADJUSTMENT NEEDED! ####
 data <- rbind(
   data.frame(
     img = list.files("C:/Users/Cornelia/Documents/Studium/EAGLE/2Semester/AdvancedProgramming/Project/sat_tiles_0_1_29_9_png_3bands", pattern=".png$", full.names = T),
@@ -31,11 +32,12 @@ data <- rbind(
 )
 
 
-
 # split of data into training and testing
 data <- initial_split(data, prop = 0.75)
 data
+
 # defining shape and batch size
+#### ADJUSTMENT NEEDED! ####
 input_shape <- c(448,448,3)
 batch_size <- 10
 
@@ -47,6 +49,7 @@ testing(data)
 train_ds <- tensor_slices_dataset(training(data))
 
 # load images and masks values into the tensor slices (i.e. fill the tensors)
+#### ADJUSTMENT NEEDED! ####
 train_ds <- dataset_map(
   train_ds, function(x) 
     list_modify(x, 
@@ -142,8 +145,6 @@ aug <- dataset_map(aug, function(x)
 # quatruple our original dataset (original + augmentated data 1 + augmentated data 2)
 train_ds_aug <- dataset_concatenate(train_ds_aug, aug)
 
-
-
 # shuffle and create batches
 train_ds <- dataset_shuffle(train_ds_aug, buffer_size = batch_size*128)
 train_ds <- dataset_batch(train_ds, batch_size)
@@ -152,6 +153,7 @@ train_ds <-  dataset_map(train_ds, unname)
 train_ds
 
 # preprocess validation as above, no augmentation
+#### ADJUSTMENT NEEDED! ####
 val_ds <- tensor_slices_dataset(testing(data))
 val_ds <- dataset_map(
   val_ds, function(x) 
@@ -232,12 +234,14 @@ unet_tensor <- layer_conv_2d(unet_tensor,filters = 1,kernel_size = 1, activation
 
 unet_model <- keras_model(inputs = input_tensor, outputs = unet_tensor)
 unet_model
+
 # compile the model
+#### ADJUSTMENT NEEDED! ####
 compile(
   unet_model,
   optimizer = optimizer_rmsprop(learning_rate = 1e-5),
-  #loss = "binary_crossentropy",
-  loss = "categorical_crossentropy",
+  loss = "binary_crossentropy",
+  #loss = "categorical_crossentropy",
   metrics = c(metric_binary_accuracy)
   #metrics = c(metric_categorical_accuracy)
 )
@@ -246,13 +250,14 @@ compile(
 run <- fit(
   unet_model,
   train_ds,
-  epochs = 2,
+  epochs = 5,
   validation_data = val_ds
 )
 
 ###
 
-#keras::save_model_hdf5(unet_model, filepath = "ice_wedges_seg_imagenet_model_nofreeze.h5")
+#### ADJUSTMENT NEEDED! ####
+keras::save_model_hdf5(unet_model, filepath = "ice_wedges_unet_binary_png.h5")
 
 #summary(unet_model)
 
@@ -263,6 +268,7 @@ run <- fit(
 evaluate(unet_model, val_ds)
 
 # create suitable format for full scene
+#### ADJUSTMENT NEEDED! ####
 input_shape <- c(448,448,3)
 ds_data <- rbind(
   data.frame(
@@ -305,10 +311,10 @@ library(png)
 for (i in seq(1,20)){
   print(i)
   # test <- predictions[i,,, 1]%>% `>`(0.2)%>% k_cast("int32")
-  test <- predictions[i,,, 1]%>%`>`(0.49)%>% k_cast("int32")
+  test <- predictions[i,,, 1]%>%`>`(0.496)%>% k_cast("int32")
   #test <- predictions[i,,, 1]
   print(as.matrix(test))
-  writePNG(as.matrix(test), target=paste("C:/Users/Cornelia/Documents/Studium/EAGLE/2Semester/AdvancedProgramming/Project/predictions_0_1_29_9_png/prediction_tile_", i+100, ".png", sep=""))
+  writePNG(as.matrix(test), target=paste("C:/Users/Cornelia/Documents/Studium/EAGLE/2Semester/AdvancedProgramming/Project/predictions_0_1_29_9_png_5/prediction_tile_", i+100, ".png", sep=""))
 }
 
 
