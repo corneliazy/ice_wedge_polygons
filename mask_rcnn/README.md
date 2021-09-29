@@ -60,4 +60,6 @@ The following steps are performed:
 
 ### Results
 
+Example of prediction for one tile
+
 [result_example](https://github.com/Wagner-L/ice_wedge_polygons/blob/main/images/result_example.png)
