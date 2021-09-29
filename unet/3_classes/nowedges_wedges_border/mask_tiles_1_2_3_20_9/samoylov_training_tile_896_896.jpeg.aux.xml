@@ -1,0 +1,29 @@
+<PAMDataset>
+  <SRS dataAxisToSRSAxisMapping="1,2">PROJCS["WGS 84 / UTM zone 52N",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",129],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","32652"]]</SRS>
+  <GeoTransform>  4.1495570269999997e+05,  7.0000000000000007e-02,  0.0000000000000000e+00,  8.0335818874000004e+06,  0.0000000000000000e+00, -6.9999999999953613e-02</GeoTransform>
+  <Metadata>
+    <MDI key="AREA_OR_POINT">Area</MDI>
+  </Metadata>
+  <PAMRasterBand band="1">
+    <Histograms>
+      <HistItem>
+        <HistMin>-0.498046875</HistMin>
+        <HistMax>255.498046875</HistMax>
+        <BucketCount>256</BucketCount>
+        <IncludeOutOfRange>0</IncludeOutOfRange>
+        <Approximate>0</Approximate>
+        <HistCounts>136016|177|114|99|105|116|82|52|68|59|54|54|63|48|48|43|50|21|28|16|22|22|12|16|10|10|10|4|5|5|3|0|0|5|3|2|0|0|0|1|0|1|2|1|2|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|1|0|0|0|0|0|0|0|0|1|0|2|1|0|3|5|2|12|6|7|4|5|9|35|18|27|32|25|36|57|52|71|93|102|101|183|174|185|287|262|285|328|381|489|508|467|5028|511|504|437|287|335|334|264|272|200|211|169|149|95|89|75|39|57|36|35|23|42|26|33|14|4|9|7|2|13|6|3|6|0|1|1|7|1|1|0|0|0|1|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|0|1|0|0|0|0|0|0|0|0|7|0|7|0|0|2|0|1|0|14|4|3|4|5|5|8|8|11|13|19|25|36|31|35|41|53|55|54|47|83|82|100|133|120|114|125|191|180|159|231|247|216|229|260|446|46267</HistCounts>
+      </HistItem>
+    </Histograms>
+    <Metadata domain="IMAGE_STRUCTURE">
+      <MDI key="COMPRESSION">JPEG</MDI>
+    </Metadata>
+    <Metadata>
+      <MDI key="STATISTICS_MAXIMUM">255</MDI>
+      <MDI key="STATISTICS_MEAN">71.691730110013</MDI>
+      <MDI key="STATISTICS_MINIMUM">0</MDI>
+      <MDI key="STATISTICS_STDDEV">109.51441652143</MDI>
+      <MDI key="STATISTICS_VALID_PERCENT">100</MDI>
+    </Metadata>
+  </PAMRasterBand>
+</PAMDataset>
