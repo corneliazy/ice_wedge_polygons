@@ -13,6 +13,9 @@ The code is based on https://github.com/matterport/Mask_RCNN using Python 3, Ker
 
 Training and validation image tiles are created based on thes script provided in the folder "pre-processing" and separated in different folders. Image annotations are created for both folders sepreately using the [VGG Image Annotator](ttps://www.robots.ox.ac.uk/~vgg/software/via/via_demo.html). The annotation file is in .json format and contains information about bounding boxes and masks of all objects in all images.
 
+![VGG annotator](https://github.com/Wagner-L/ice_wedge_polygons/blob/main/images/VGG_annotator.png)
+
+
 The required structure of the training/validation dataset has to look as follows:
 
 dataset<br />
