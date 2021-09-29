@@ -33,7 +33,7 @@ dataset<br />
 
 ## Training
 
-Processing is done in Google Colab. The dataset for training has to be uploaded in a connected Google drive folder.
+Processing is done in Google Colab (https://colab.research.google.com/drive/1dZXOp04PL7oT70T4EzNkEjM2SULhNKZF?usp=sharing). The dataset for training has to be uploaded in a connected Google drive folder.
 
 The following steps are performed:
 1. Importing and cloning repositories
