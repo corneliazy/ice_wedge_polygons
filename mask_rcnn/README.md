@@ -45,6 +45,8 @@ The following steps are performed:
 
 The trained model has to be saved to serve as input for prediction.
 
+A trained model is accessible here: https://wolke.upgradetofreedom.de/s/HsgRHeJWoFrcKZb
+
 
 ## Predicting
 
