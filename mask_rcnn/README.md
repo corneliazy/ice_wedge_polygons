@@ -63,3 +63,17 @@ The following steps are performed:
 Example of prediction for one tile
 
 ![result_example](https://github.com/Wagner-L/ice_wedge_polygons/blob/main/images/result_example.png)
+
+
+### Discussion
+
+Further improvements are required that first of allneed more computing time and power
+
+- deeper network 
+- more training data
+- bigger tiles
+- multiple polygon classes (dry, wet, flooded, degraded,...)
+
+
+
+
